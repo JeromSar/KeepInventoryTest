@@ -14,6 +14,8 @@ public class KeepInventoryTest extends JavaPlugin implements Listener {
     
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent event) {
+        super.getLogger().info("Default: " + event.getKeepInventory());
+
         // Keeps inventory if player is OP
         if (event.getEntity().isOp()) {
             event.setKeepInventory(true);   
